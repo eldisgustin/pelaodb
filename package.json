@@ -9,6 +9,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.5"
+    "@astrojs/react": "^4.4.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.16.5",
+    "class-transformer": "^0.5.1",
+    "fuzzy-search": "^3.2.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "read-excel-file": "^6.0.1",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@types/fuzzy-search": "^2.1.5",
+    "daisyui": "^5.5.14"
   }
 }
