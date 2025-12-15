@@ -3,7 +3,7 @@ import * as path from "node:path";
 import readXlsxFile from "read-excel-file/node";
 import { Book } from "../models/book.model";
 
-const source = path.resolve(import.meta.dirname, "../assets/DB.xlsx");
+const source = path.resolve(import.meta.dirname, "../static/DB.xlsx");
 const rows = await readXlsxFile(source);
 const raw = rows
   .slice(1)
