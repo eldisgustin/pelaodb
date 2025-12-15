@@ -8,14 +8,14 @@ export function Search({ onSearch }: SearchProps) {
   const [filter, setFilter] = useState<string>("");
 
   const handleChange = (event: React.FormEvent<HTMLInputElement>) => {
-    console.log(filter);
-
     setFilter(event.currentTarget.value);
   };
 
   return (
     <form
-      onSubmit={() => {
+      onSubmit={(event) => {
+        event.preventDefault();
+
         onSearch(filter);
       }}
       className="join m-4"
