@@ -10,6 +10,9 @@ export default defineConfig({
   integrations: [react()],
 
   vite: {
+    ssr: {
+      noExternal: ["react-use"],
+    },
     plugins: [
       tailwindcss(),
       viteStaticCopy({

@@ -18,7 +18,7 @@ export function Search({ onSearch }: SearchProps) {
 
         onSearch(filter);
       }}
-      className="join m-4"
+      className="flex join m-4"
     >
       <input onChange={handleChange} className="input grow join-item" />
       <button type="submit" className="btn btn-square join-item">
