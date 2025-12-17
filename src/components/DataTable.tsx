@@ -16,10 +16,10 @@ type DataTableProps = {
 
 export function DataTable({ query }: DataTableProps) {
   const books = use(BooksContext);
-  const results = useMemo(() => {
+  const highlight = useMemo(() => {
     return fuzzy.filter(query, books, {
-      pre: "<mark>",
-      post: "</mark>",
+      pre: "<b>",
+      post: "</b>",
       extract(el) {
         return el.title;
       },
@@ -40,7 +40,7 @@ export function DataTable({ query }: DataTableProps) {
         </tr>
       </thead>
       <tbody>
-        {results.map((book, index) => (
+        {highlight.map((book, index) => (
           <tr key={`${book.original.isbn}.${index}`}>
             <td dangerouslySetInnerHTML={{ __html: book.string }}></td>
             <td>{book.original.author}</td>
